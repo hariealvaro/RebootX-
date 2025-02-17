@@ -383,3 +383,115 @@ video {
         object-position: center; /* ✅ Geser ke tengah untuk mobile */
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ✅ Background Hijau dengan Gradient */
+.contact-section {
+    background: linear-gradient(135deg, #25D366, #128C7E); /* WhatsApp Theme */
+    color: white;
+    padding: 80px 20px;
+}
+
+/* ✅ Style Card */
+.contact-card {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 10px;
+}
+
+/* ✅ Icon WhatsApp Besar */
+.whatsapp-icon {
+    font-size: 50px;
+    color: #25D366;
+    margin-bottom: 15px;
+}
+
+/* ✅ Tombol WhatsApp */
+.btn-whatsapp {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E;
+}
+
+/* ✅ Form Input */
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* ✅ Tombol Kirim */
+.btn-primary {
+    background: #007BFF;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 20px;
+    }
+    .whatsapp-icon {
+        font-size: 40px;
+    }
+    .btn-whatsapp, .btn-primary {
+        padding: 10px 15px;
+    }
+}
+/* ✅ Styling untuk tombol WhatsApp dengan logo di samping */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    color: white;
+}
+
+/* ✅ Logo WhatsApp di samping tombol */
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
