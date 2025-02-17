@@ -383,6 +383,18 @@ video {
         object-position: center; /* ✅ Geser ke tengah untuk mobile */
     }
 }
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 8%;
+    opacity: 1; /* Pastikan panah selalu terlihat */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Warna transparan agar terlihat */
+    border-radius: 50%; /* Bentuk bulat */
+    padding: 15px;
+}
 
 
 
