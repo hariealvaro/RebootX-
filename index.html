@@ -111,27 +111,49 @@
     </div>
 </section>
 
-    <!-- hubungi kami -->
-    
-<section id="contact" class="container text-center my-5">
-    <h2 class="section-title">Hubungi Kami</h2>
-    <p class="section-text">Isi formulir di bawah ini atau hubungi kami langsung via WhatsApp.</p>
+  <!-- Bagian Hubungi Kami -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="text-center">Hubungi Kami</h2>
+        <p class="text-center">Silakan hubungi kami melalui WhatsApp atau kirim pesan melalui email.</p>
 
-    <!-- Formulir Kontak -->
-    <form class="w-75 mx-auto">
-        <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Nama Anda" required>
-        </div>
-        <div class="mb-3">
-            <input type="email" class="form-control" placeholder="Email Anda" required>
-        </div>
-        <div class="mb-3">
-            <textarea class="form-control" rows="4" placeholder="Pesan Anda" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
-    </form>
+        <div class="row">
+            <!-- Kolom WhatsApp -->
+            <div class="col-md-6">
+                <div class="contact-card text-center">
+                    <h3>Chat via WhatsApp</h3>
+                    <p>Klik tombol di bawah untuk langsung terhubung.</p>
+                    <a href="https://wa.me/6285817560399" target="_blank" class="btn btn-whatsapp">
+                        <img src="assets/images/whatsapp-logo.png" alt="WhatsApp Logo" class="whatsapp-icon">
+                        Chat Sekarang
+                    </a>
+                </div>
+            </div>
 
+            <!-- Bagian Form Kirim Email -->
+<div class="col-md-6">
+    <div class="contact-card">
+        <h3>Kirim Pesan ke Email</h3>
+        <form id="emailForm">
+            <div class="mb-3">
+                <input type="text" id="name" class="form-control" placeholder="Nama Anda" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" id="email" class="form-control" placeholder="Email Anda" required>
+            </div>
+            <div class="mb-3">
+                <textarea id="message" class="form-control" rows="4" placeholder="Pesan Anda" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+        </form>
+    </div>
+</div>
+
+        </div>
+    </div>
 </section>
+
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
@@ -151,7 +173,7 @@
         Halo! Ada yang bisa kami bantu? Klik tombol di bawah untuk menghubungi kami via WhatsApp.
     </div>
     <div class="popup-footer">
-        <a href="https://wa.me/6281234567890" target="_blank">Chat di WhatsApp</a>
+        <a href="https://wa.me/6285817560399" target="_blank">Chat di WhatsApp</a>
     </div>
 </div>
 
@@ -165,7 +187,21 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("whatsapp-popup").style.display = "none";
     });
 });
-</script>
-
+    document.getElementById("emailForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Mencegah reload halaman
+    
+        // Ambil nilai input dari form
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+    
+        // Buat mailto link
+        let mailtoLink = `mailto:youremail@example.com?subject=Pesan dari ${name}&body=Nama: ${name}%0AEmail: ${email}%0A%0APesan:%0A${message}`;
+    
+        // Buka email di aplikasi default
+        window.location.href = mailtoLink;
+    });
+    </script>
+    
 </body>
 </html>
