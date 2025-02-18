@@ -31,10 +31,10 @@ video {
     padding: 0;
 }
 
-/* Logo di navbar */
 .logo {
-    height: 100px; /* Ukuran logo otomatis kecil */
-    width: 210px;
+    height: 50px; /* Sesuaikan tinggi logo */
+    width: auto; /* Menjaga aspek rasio */
+    max-width: 150px; /* Batas maksimal */
 }
 
 /* Agar navbar tetap rapi */
